@@ -1,0 +1,19 @@
+{
+  "name": "xBomber",
+  "version": "1.0.4",
+  "description": "A free and open-source SMS bombing application",
+  "main": "index.js",
+  "scripts": {
+    "start":"node ./index.js"
+  },
+  "keywords": ["node","sms","sms bombing","xBomber"],
+  "repository": "https://github.com/itsmevikashkumarsingh/xBomber",
+  "author": "Sheikh Haziq",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "express": "^4.17.1",
+    "open": "^7.3.0",
+    "socket.io": "^2.3.0"
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xBomber</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ff3b30">
+    <link rel="icon" href="icon.png" />
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <script src="js/funcs.js"></script>
+    
+</head>
+<body>
+    <ons-page style="text-align: center;">
+     <ons-toolbar style="background:#ff3b30;color:#fff">
+       <div class="center" style="color:#fff">
+          xBomber
+        </div>
+        <!-- <div class="right">
+            <a style="text-decoration:none;color:#000"  href="https://github.com/sheikh-haziq/xBomber">
+                <ons-icon style="margin:5px;font-size:33px;color:#000000"  icon="ion-logo-github"></ons-icon>
+            </a>
+        </div>  -->
+      </ons-toolbar>
+      <ons-input
+        id="number"
+        style="margin-top: 100px;"
+        type="number"
+        placeholder="Number"
+        max="10"
+        float>
+      </ons-input>
+      <!-- <ons-button id="select" style="background:#ff3b30;color:#fff">Select</ons-button> -->
+      <br /><br />
+      <ons-button style="background:#ff3b30;color:#fff">Count
+        <select style="background:#ff3b30;color:#fff;border:none" id="count">
+        </select>
+      </ons-button><br />
+      <ons-button id="btn" style="margin-top: 10px;background:#ff3b30;color:#fff">Attack</ons-button>
+      <div id="status" style="margin-top: 30px;"></div>
+    </ons-page>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+     <script>
+     var count = document.getElementById('count')
+        for(var i=1;i<5001;i++){
+            var el = document.createElement('option');
+            el.value=i;
+            el.innerHTML =i;
+            count.appendChild(el);
+        }
+     </script>
+    <script src="js/index.js"></script>
+</body>
+</html>
